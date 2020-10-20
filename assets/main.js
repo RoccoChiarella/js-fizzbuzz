@@ -1,16 +1,24 @@
-var x = "";
+var fizz = "";
 
-for (var i = 0; i <= 100 ; i++) {
+var buzz = "";
+
+var fizzbuzz = "";
+
+for (var i = 3; i <= 100 ; i++) {
     if ((i % 5 == 0) && (i % 3 == 0)) {
-        x = x + '<span class="fizzbuzz">FizzBuzz </span>';
+        fizzbuzz = fizzbuzz + '<span>FizzBuzz <span class="numero">'+ i +'</span></span>';
         console.log(i);
     } else if (i % 3 == 0) {
-        x = x + '<span class="fizz">Fizz </span>';
+        fizz = fizz + '<span>Fizz <span class="numero">'+ i +'</span></span>';
         console.log(i);
     } else if (i % 5 == 0) {
-        x = x + '<span class="buzz">Buzz </span>';
+        buzz = buzz + '<span>Buzz <span class="numero">'+ i +'</span></span>';
         console.log(i);
     }
 }
 
-document.getElementById('FizzBuzz').innerHTML = x;
+document.getElementById('fizz').innerHTML = fizz;
+
+document.getElementById('buzz').innerHTML = buzz;
+
+document.getElementById('fizzbuzz').innerHTML = fizzbuzz;
